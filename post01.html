@@ -75,62 +75,107 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <h1>What is Bash</h1>
-          <p>A Unix shell and command language that lives inside terminal.</p>
-          <p>Examples of commands and what they do.</p>
+          <p>A Unix shell and command language that lives inside terminal. </p>
+
           <ul class="list-unstyled">
-            <li><b>man</b> Manual</li>
+            <h3>General Useful</h3>
+
+            <li><b>man</b> Manuel - use before commands</li>
             <li><b>man ls</b> Displays the manual for the ls command.</li>
+            <li><b>*</b> Wildcard</li>
+
             <p></p>
+            <h3>Navigating through folders</h3>
             <li><b>pwd</b> Print Working Directory</li>
-            <p></p>
+            <li></li>
             <li><b>cd</b> Change Directory</li>
             <li><b>cd ..</b> Move to parent directory</li>
             <li><b>cd ~</b> Move to home directory</li>
             <li><b>cd /</b> Move to root directory</li>
             <li><b>cd -</b> Return to previous directory</li>
             <li><b>cd ../otherFolder</b> Move back one directory and then into otherFolder</li>
-            <li>More: Use tab for autocomplete. Tab twice display list of options.</li>
-            <p></p>
+            <li><i>Tab key</i> Use to autocomplete file and directory names. double click for list of options.</li>
+            <li></li>
             <li><b>ls</b> List contents of directory</li>
-            <li><b>ls -larth</b> More info l=long format; a=all files display hidden; r=reverse order oldest first; t=sort by time; h=byte suffixes</li>
+            <li><b>ls -larth</b> More info l=long format; a=all files display hidden; r=reverse order oldest first;
+              t=sort by time; h=byte suffixes</li>
+
             <p></p>
+            <h3>File and Folder Creation/Deletion</h3>
+            <li><b>touch</b> Create a file</li>
+            <li><b>touch filename.txt</b> Creates a file with the name filename.txt</li>
+            <li><b>mkdir</b> Make Directory</li>
+            <li><b>mkdir folder</b> Makes a folder with the name folder</li>
+            <li><b>rm</b> Remove</li>
+            <li><b>rm filename.txt</b> Remove the file named filename.txt</li>
+            <li><b>rm -r folder</b> Remove the folder named folder along with everything inside</li>
+            <li><b>rm *</b> Removes all files within the current directory - <b>Be careful with this one.</b></li>
+
+            <p></p>
+            <h3>Move and rename</h3>
+            <li><b>mv</b> Move a file or folder</li>
+            <li><b>mv filename.txt /location/newFolder/</b> moves filename.txt to /location/newfolder</li>
+            <li><b>mv * ../differentFolder</b> move every file in this folder into a sibling folder named
+              differentFolder</li>
+            <li><b>rename</b> modify the name of files</li>
+            <li><b>rename old new oldname.txt</b> Rename oldname.txt to newname.txt</li>
+            <li><b>rename F f Facebook*</b> Change all F in files that start with Facebook to f</li>
+
+            <p></p>
+            <h3>File viewing</h3>
+            <li><b>less</b> Opens a file in read-only mode</li>
+            <li><b>less filename.txt</b> Opens the file named filename.txt into the less program</li>
+            <li><i>commands within less</i></li>
+            <li><b>q</b> exit</li>
+            <li><b>G</b> go to bottom of file</li>
+            <li><b>g</b> go to top of file</li>
+            <li><b>?</b> Search up in file</li>
+            <li><b>/</b> Search down in file</li>
+            <li><b>n</b> next search</li>
+            <li><b>shift n</b> previous search</li>
+
+            <p></p>
+            <h3>File editing</h3>
+            <li><b>vim</b> Opens a file in edit mode</li>
+            <li><b>vim filename.txt</b> Opens the file named filename.txt into the vim program</li>
+            <li><i>commands within vim</i></li>
+            <li><b>:q!</b> exit without saving (colon quit bang)</li>
+            <li><b>:wq!</b> exit with saving (colon write quit bang)</li>
+            <li><b>arrow keys</b> move through file</li>
+            <li><b>i</b> Switch to insert mode</li>
+            <li><b>dd</b> Delete line when not in insert mode</li>
+
+            <p></p>
+            <h3>Sudo (Please do what i asked)</h3>
+            <li><b>whoami</b> Displays the user you currently are.</li>
+            <li><b>sudo su root</b> Become the root super user</li>
+
+            <p></p>
+            <h3>Permissions</h3>
+            <li><b>chmod</b> Change mode</li>
+            <li><b>chmod 777 folder</b> Fully opens the permissions of a folder</li>
+            <li><b>chmod 777 filename.txt</b> Fully opens the permissions of a file</li>
+            <li><b>sudo chmod 777 filename.txt</b> Change the permissions when you don't have permission</li>
+            <li>You can see these permissions by typing <b>ls -larth</b> in a folder</li>
+            <li><b>-</b>rwxrwxrwx (<b>-</b> = file)</li>
+            <li><b>d</b>rwxrwxrwx (<b>d</b> = directory)</li>
+            <li><b>chmod 764 filename.txt</b> sets the permmissions of filename.txt to
+              <ul>
+                <li>7(rwx)Read/Write/Execute permissions for the user the file belongs to </li>
+                <li>6(rw-)Read/Write permissions for group the user is a part of</li>
+                <li>4(r--)Read permissions for everyone</li>
+              </ul>
+            </li>
+
+            <p></p>
+            <h3>Ownership</h3>
+            <li><b>chown</b> Change ownership</li>
+            <li><b>chown username:group folder</b> Change the ownership of a folder to username:group</li>
+            <li><b>chown username: folder</b> Leaving out the group will choose the default for that user</li>
+            <li><b>chown username:group filename.txt</b> Change the ownership of a file</li>
+            <li><b>sudo chown username:group filename.txt</b> Change the ownership of a file when you don't have permissions</li>
+
           </ul>
-
-          <h6>Where are bash files located.</h6>
-          <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning
-            back from science. The early warnings about technological dangers also come from science.</p>
-
-          <h6>How to view files in the terminal</h6>
-          <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set
-            eye on the earth.</p>
-
-          <h6>How to edit files in the terminal</h6>
-          <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her
-            protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not
-            help but love and cherish her.</p>
-
-          <h6>Using alias for quicker commands</h6>
-          <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the
-            experience most certainly changes your perspective. The things that we share in our world are far more
-            valuable than those which divide us.</p>
-
-          <h6>Adding color to the prompt</h6>
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a
-            task to occupy the generations. And no matter how much progress one makes, there is always the thrill of
-            just beginning.</p>
-          <a href="#">
-            <img class="img-fluid" src="img/bashColors.png" alt="">
-          </a>
-          <p>More about color</p>
-
-          <h6>Creating useful Functions</h6>
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a
-            task to occupy the generations. And no matter how much progress one makes, there is always the thrill of
-            just beginning.</p>
-
-
-
-
         </div>
       </div>
     </div>
@@ -143,25 +188,25 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-                <li class="list-inline-item">
-                  <a href="https://www.linkedin.com/in/robertdcrum">
-                    <span class="fa-stack fa-lg">
-                      <i class="fas fa-circle fa-stack-2x"></i>
-                      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                </li>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://github.com/gargansa">
-                    <span class="fa-stack fa-lg">
-                      <i class="fas fa-circle fa-stack-2x"></i>
-                      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                </li>
-              </ul>
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/robertdcrum">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/gargansa">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
           <p class="copyright text-muted">Copyright &copy; Robert Crum 2019</p>
         </div>
       </div>
