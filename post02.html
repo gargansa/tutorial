@@ -74,59 +74,58 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <h1>What is Bash</h1>
-          <p>A Unix shell and command language that lives inside terminal.</p>
-          <p>Examples of commands and what they do.</p>
           <ul class="list-unstyled">
-            <li><b>man</b> Manual</li>
-            <li><b>man ls</b> Displays the manual for the ls command.</li>
+
+            <h3>What is the bashrc file</h3>
+            <p>These files are loaded when you start a terminal session.</p>
+            <p>You can use them to personalize your prompt, define alias to shorten commands, and store commonly used
+              functions to make life easier.</p>
+
             <p></p>
-            <li><b>pwd</b> Print Working Directory</li>
+            <h3>Where are bashrc files located.</h3>
+            <p>For bash in <b>cd /etc</b></p>
+            <p>For oh_my_zsh in <b>cd ~</b> also known as home directory</p>
+
             <p></p>
-            <li><b>cd</b> Change Directory</li>
-            <li><b>cd ..</b> Move to parent directory</li>
-            <li><b>cd ~</b> Move to home directory</li>
-            <li><b>cd /</b> Move to root directory</li>
-            <li><b>cd -</b> Return to previous directory</li>
-            <li><b>cd ../otherFolder</b> Move back one directory and then into otherFolder</li>
-            <li>More: Use tab for autocomplete. Tab twice display list of options.</li>
+            <h3>How to edit bashrc files in the terminal</h3>
+            <p>Bash <b>sudo vim /etc/bashrc</b></p>
+            <p>Oh My Zsh <b>sudo vim ~/zshrc</b></p>
+
             <p></p>
-            <li><b>ls</b> List contents of directory</li>
-            <li><b>ls -larth</b> More info l=long format; a=all files display hidden; r=reverse order oldest first; t=sort by time; h=byte suffixes</li>
+            <h3>Installing zshrc</h3>
+            <p>More later...</p>
+
             <p></p>
-          </ul>
+            <h3>Letting terminal know which bash you will use.</h3>
+            <p></p>
+            <h5>In <b>terminal</b> and <b>Iterm</b></h5>
+            <p>bash <b>chsh -s /bin/bash && exit</b> This will set the bash and then exit so we can restart terminal
+              with the new bash</p>
+            <p>bash <b>chsh -s /bin/zsh && exit</b> This will set the bash and then exit so we can restart terminal with
+              the new bash</p>
 
-          <h6>Where are bash files located.</h6>
-          <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning
-            back from science. The early warnings about technological dangers also come from science.</p>
+            <h5>In <b>VS Code</b></h5>
+            <p>Open a terminal by holding <b>control + ~</b>(the tilda key)</p>
+            <p>Click on the shell button</p>
+            <img class="img-fluid" src="img/VsTerm1.png" alt="">
+            <p>Select default Shell</p>
+            <img class="img-fluid" src="img/VsTerm2.png" alt="">
+            <p>Choose the shell you want from the list</p>
+            <img class="img-fluid" src="img/VsTerm3.png" alt="">
+            <p>Close the terminal <b>Control + b</b> and reopen with <b>Control + ~</b></p>
 
-          <h6>How to view files in the terminal</h6>
-          <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set
-            eye on the earth.</p>
+            <p></p>
+            <h3>Adding alias to bash</h3>
 
-          <h6>How to edit files in the terminal</h6>
-          <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her
-            protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not
-            help but love and cherish her.</p>
-
-          <h6>Using alias for quicker commands</h6>
-          <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the
-            experience most certainly changes your perspective. The things that we share in our world are far more
-            valuable than those which divide us.</p>
-
-          <h6>Adding color to the prompt</h6>
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a
-            task to occupy the generations. And no matter how much progress one makes, there is always the thrill of
-            just beginning.</p>
-          <a href="#">
+            <p></p>
+            <h3>Adding color to the prompt</h3>
+            <p>This is mostly meant for default bashrc as oh my zsh comes with its own themes</p>
+            <p>Below are all the color options available for bash on systems with 256 colors enabled.</p>
             <img class="img-fluid" src="img/bashColors.png" alt="">
-          </a>
-          <p>More about color</p>
+            <p>More about color later</p>
 
-          <h6>Creating useful Functions</h6>
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a
-            task to occupy the generations. And no matter how much progress one makes, there is always the thrill of
-            just beginning.</p>
+            <h3>Creating useful Functions</h3>
+            <p>More later</p>
 
 
 
@@ -143,25 +142,25 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-                <li class="list-inline-item">
-                  <a href="https://www.linkedin.com/in/robertdcrum">
-                    <span class="fa-stack fa-lg">
-                      <i class="fas fa-circle fa-stack-2x"></i>
-                      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                </li>
-                </li>
-                <li class="list-inline-item">
-                  <a href="https://github.com/gargansa">
-                    <span class="fa-stack fa-lg">
-                      <i class="fas fa-circle fa-stack-2x"></i>
-                      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                </li>
-              </ul>
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/robertdcrum">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/gargansa">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
           <p class="copyright text-muted">Copyright &copy; Robert Crum 2019</p>
         </div>
       </div>
