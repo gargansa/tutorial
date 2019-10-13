@@ -333,6 +333,15 @@ header.masthead .post-heading .meta a {
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
+.fill{
+  width: 100%;
+  text-align: center;
+  border: pink;
+}
+
+
+
+
 .floating-label-form-group input::-webkit-input-placeholder,
 .floating-label-form-group textarea::-webkit-input-placeholder {
   color: #868e96;
