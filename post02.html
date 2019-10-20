@@ -27,7 +27,6 @@
 </head>
 
 <body>
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
@@ -58,8 +57,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Making bash work for you with bashrc</h1>
-            <h2 class="subheading">Alias prompt and functions</h2>
+            <h2>Making bash work for you with rc files</h2>
+            <h3 class="subheading">Alias prompt and functions</h3>
             <span class="meta">Posted by
               <a href="#">Robert Crum</a>
               on October 7, 2019</span>
@@ -74,79 +73,135 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <ul class="list-unstyled">
 
-            <h3>What is the bashrc file</h3>
-            <p>These files are loaded when you start a terminal session.</p>
-            <p>You can use them to personalize your prompt, define alias to shorten commands, and store commonly used
-              functions to make life easier.</p>
-            <p>There are many types of terminal sessions two popular ones are <b>bash</b> The default on macOS 10.3 -
-              10.14 (including El Capitan 10.11, Sierra 10.12, High Sierra 10.13, and Mojave 10.14) <b>zsh</b> which is
-              default on macOS 10.15 Catalina</p>
+          <h3>What is the bashrc file</h3>
+          <p>These files are loaded when you start a terminal session.</p>
+          <p>Used to personalize your prompt, define alias to shorten commands, and store commonly used
+            functions to make life easier.</p>
+          <p>Two types of terminal sessions are </p>
+          <p><b>bash</b> The default on macOS 10.3 - 10.14 (including El Capitan 10.11, Sierra 10.12, High Sierra
+            10.13, and Mojave 10.14) </p>
+          <p><b>zsh</b> which is default on macOS 10.15 Catalina</p>
 
-            <p></p>
-            <h3>Where are bashrc files located.</h3>
-            <p>For bash in <b>cd /etc</b></p>
-            <p>For oh_my_zsh in <b>cd ~</b> also known as home directory</p>
+          <p class="space"></p>
+          <h2>Bash</h2>
+          <p>Where are bashrc files?</p>
+          <p><b>cd /etc</b></p>
+          <p class="halfspace"></p>
+          <p>How to edit bashrc files in the terminal </p>
+          <p><b>sudo vim /etc/bashrc</b></p>
 
-            <p></p>
-            <h3>How to edit bashrc files in the terminal</h3>
-            <p>Bash <b>sudo vim /etc/bashrc</b></p>
-            <p>Oh My Zsh <b>sudo vim ~/.zshrc</b></p>
+          <p class="halfspace"></p>
+          <p>Set bash as default in terminal.</p>
+          <p><b>chsh -s /bin/bash && exit</b></p>
+          <p class="halfspace"></p>
+          <p>Letting VS Code know to use bash as default.</p>
+          <p>Open a terminal by holding <b>control + ~</b>(the tilda key)</p>
+          <p>Click on the shell button</p>
+          <img class="img-fluid" src="img/VsTerm1.png" alt="">
+          <p>Select default Shell</p>
+          <img class="img-fluid" src="img/VsTerm2.png" alt="">
+          <p>Choose the shell you want from the list</p>
+          <img class="img-fluid" src="img/VsTerm3.png" alt="">
+          <p>Close the terminal <b>Control + b</b> and reopen with <b>Control + ~</b></p>
 
-            <p></p>
-            <h3>Installing zshrc</h3>
-            <p>More later...</p>
+          <p class="space"></p>
+          <h3>Adding color to bash</h3>
+          <p>Color options available for bash with 256 colors enabled.</p>
+          <img class="img-fluid" src="img/bashColors.png" alt="">
 
-            <p></p>
-            <h3>Letting terminal know which bash you will use.</h3>
-            <p></p>
-            <h5>In <b>terminal</b> and <b>Iterm</b></h5>
-            <p>bash <b>chsh -s /bin/bash && exit</b> This will set the bash and then exit so we can restart terminal
-              with the new bash</p>
-            <p>bash <b>chsh -s /bin/zsh && exit</b> This will set the bash and then exit so we can restart terminal with
-              the new bash</p>
+          <p class="space"></p>
+          <h3>Creating a colorful prompt</h3>
+          <p>Edit the bashrc file in vim using the instructions above</p>
+          <p>Copy this code</p>
+          <p class="space"></p>
 
-            <h5>In <b>VS Code</b></h5>
-            <p>Open a terminal by holding <b>control + ~</b>(the tilda key)</p>
-            <p>Click on the shell button</p>
-            <img class="img-fluid" src="img/VsTerm1.png" alt="">
-            <p>Select default Shell</p>
-            <img class="img-fluid" src="img/VsTerm2.png" alt="">
-            <p>Choose the shell you want from the list</p>
-            <img class="img-fluid" src="img/VsTerm3.png" alt="">
-            <p>Close the terminal <b>Control + b</b> and reopen with <b>Control + ~</b></p>
-
-            <p></p>
-            <h3>Adding alias to bash</h3>
-            <p>Open the bash file using the edit instructions above</p>
-            <p>Type <b>alias="</b>place commands here<b>"</b></p>
-
-            <p></p>
-            <h3>Adding color to the prompt</h3>
-            <p>This is mostly meant for default bashrc as oh my zsh comes with its own themes</p>
-            <p>Below are all the color options available for bash on systems with 256 colors enabled.</p>
-            <img class="img-fluid" src="img/bashColors.png" alt="">
-            <p>More about color later</p>
-
-            <h3>Changing oh_my_zsh Themes</h3>
-            <p>Visit <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes"> Oh My Zsh</a> on github to find a
-              theme you like</p>
-            <p>Open the terminal and type <b>sudo vim ~/.zshrc</b></p>
-            <p>Use the arrow keys to move down to the line that says <b>ZSH_THEME</b></p>
-            <p>Tap the <b>i</b> key to enter insert mode</p>
-            <p>Delete the theme within the <b>" "</b></p>
-            <p>Type in the theme you want.</p>
-            <p>Hit the <b>esc</b> key to leave insert mode</p>
-            <p>Type <b>:wq!</b> and hit <b>Enter</b></p>
-            <p><i>If you make a mistake when editing this file type </i><b>:q!</b><i> instead to quit without saving</i>
-            </p>
-
-            <p></p>
-            <h3>Creating useful Functions</h3>
-            <p>More later</p>
+          <b>
+            <div>
+              <span class="highlight" data-tooltip="Initialize no color variable">NC='\033[0m'</span>
+            </div>
+            <div>
+              <span class="highlight" data-tooltip="Initialize foreground color variable">FG=37</span>
+            </div>
+            <div>
+              <span class="highlight" data-tooltip="Initialize background color variable">BG=53</span>
+            </div>
+            <div>
+              <span class="highlight" data-tooltip="Initialize variable color">COLOR=</span><span class="highlight"
+                data-tooltip="Escape Character">'\033[</span><span class="highlight"
+                data-tooltip="Foreground color will follow">38;5;</span><span class="highlight"
+                data-tooltip="Foreground variable from above">${FG}</span><span class="highlight"
+                data-tooltip="Separate colors">;</span><span class="highlight"
+                data-tooltip="Background color will follow">48;5;</span><span class="highlight"
+                data-tooltip="Background variable from above">${BG}</span><span class="highlight"
+                data-tooltip="End of command">m'</span>
+            </div>
+            <div>
+              <span class="highlight" data-tooltip="Prompt">PS1=</span><span class="highlight"
+                data-tooltip="Color variable from above">\[$COLOR\]</span><span class="highlight"
+                data-tooltip="Date">\D{"%m-%d-%y"}</span><span class="highlight" data-tooltip="Directory">\w</span><span
+                class="highlight" data-tooltip="Reset to having no color">\[$NC\]</span>
+            </div>
+          </b>
 
 
+
+          <p class="space"></p>
+          <p>Paste it into the vim editor in the terminal</p>
+
+          <p class="doublespace"></p>
+          <h2>Oh My Zsh</h2>
+          <h3>Where are bashrc files located.</h3>
+          <p><b>cd ~</b> home directory</p>
+
+          <p class="halfspace"></p>
+          <h3>How to edit zshrc files in the terminal</h3>
+          <p><b>sudo vim ~/.zshrc</b></p>
+
+          <p class="halfspace"></p>
+          <h3>Installing zshrc</h3>
+          <p>More later...</p>
+
+          <p class="halfspace"></p>
+          <p>Set zsh as default in terminal.</p>
+          <p><b>chsh -s /bin/zsh && exit</b></p>
+
+          <h5>In <b>VS Code</b></h5>
+          <p>Open a terminal by holding <b>control + ~</b>(the tilda key)</p>
+          <p>Click on the shell button</p>
+          <img class="img-fluid" src="img/VsTerm1.png" alt="">
+          <p>Select default Shell</p>
+          <img class="img-fluid" src="img/VsTerm2.png" alt="">
+          <p>Choose the shell you want from the list</p>
+          <img class="img-fluid" src="img/VsTerm3.png" alt="">
+          <p>Close the terminal <b>Control + b</b> and reopen with <b>Control + ~</b></p>
+
+          <h3>Changing oh_my_zsh Themes</h3>
+          <p>Visit <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes"> Oh My Zsh</a> on github to find a
+            theme you like</p>
+          <p>Open the terminal and type <b>sudo vim ~/.zshrc</b></p>
+          <p>Use the arrow keys to move down to the line that says <b>ZSH_THEME</b></p>
+          <p>Tap the <b>i</b> key to enter insert mode</p>
+          <p>Delete the theme within the <b>" "</b></p>
+          <p>Type in the theme you want.</p>
+          <p>Hit the <b>esc</b> key to leave insert mode</p>
+          <p>Type <b>:wq!</b> and hit <b>Enter</b></p>
+          <p><i>If you make a mistake when editing this file type </i><b>:q!</b><i> instead to quit without saving</i>
+          </p>
+
+          <p class="halfspace"></p>
+          <h3>Creating Alias</h3>
+          <p>Open the bashrc or zshrc file using the edit instructions above</p>
+          <p>Type <b>alias="</b>place commands here<b>"</b> inside the file</p>
+          <p>For example</p>
+          <p>if using bash <b>alias rc='sudo vim /etc/bashrc && source /etc/bashrc'</b></p>
+          <p>if using zsh <b>alias rc='sudo vim ~/.zshrc && source ~/.zshrc'</b></p>
+          <p>Now anytime you type rc it will open your bash file into <b>vim</b> editor and then start using the new
+            file when you write and quit <b>:wq!</b></p>
+
+          <p class="halfspace"></p>
+          <h3>Creating Functions</h3>
+          <p>More later</p>
 
 
         </div>
