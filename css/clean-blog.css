@@ -11,7 +11,7 @@ body {
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.25;
   margin: 2.5px 0;
 }
 
@@ -21,13 +21,20 @@ p a {
 
 h1,
 h2,
-h3,
+h3{
+  font-weight: 800;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 10px 0;
+}
+
+
 h4,
 h5,
 h6 {
   font-weight: 800;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 10px 0;
+  color: rgb(33, 86, 95)
 }
 
 a {
@@ -425,6 +432,10 @@ footer .copyright {
   position: relative;
   z-index: 2;
   cursor: pointer;
+  font-weight: bold;
+}
+[data-tooltip]:hover{
+  background-color: yellow;
 }
 
 /* Hide the tooltip content by default */
@@ -445,7 +456,7 @@ footer .copyright {
   margin-bottom: 5px;
   margin-left: -80px;
   padding: 7px;
-  width: 160px;
+  width: 175px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -483,6 +494,25 @@ footer .copyright {
   opacity: 1;
 }
 
+[tab1]{
+  text-indent: 1em;
+}
+[tab2]{
+  text-indent: 2em;
+}
+[tab3]{
+  text-indent: 3em;
+}
+[tab4]{
+  text-indent: 4em;
+}
+
+[break]{
+    border-bottom: 2px solid rgb(47, 136, 151,0.5);
+    display: block;
+}
+
+
 .doublespace{
   margin-top:3.0em;
 }
@@ -491,7 +521,4 @@ footer .copyright {
 }
 .halfspace{
   margin-top: 0.75em;
-}
-.highlight:hover{
-  background-color: yellow;
 }
