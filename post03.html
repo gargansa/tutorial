@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Gargansa Tutorials</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/clean-blog.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/hyalite.jpeg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Recursion</h1>
+            <h3 class="subheading">Repetition with an exit strategy</h3>
+            <span class="meta">Posted by
+              <a href="about.html">Robert Crum</a>
+              last updated October 21, 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <h3>What is recursion</h3>
+          <p>A way of simplifying a problem into smaller problems. Divide and Conquer.</p>
+
+          <p class="doublespace"></p>
+          <h3>Starting Simple</h3>
+          <p>This function contains every piece you need for a recursive function.</p>
+          <p>function <span data-tooltip="Name of function">myfunction</span><span
+              data-tooltip="Functions Input">(i)</span><span data-tooltip="Start function">{</span></p>
+          <p tab1><span data-tooltip="Output">console.log(i)</span></p>
+          <p tab1>if <span data-tooltip="Exit Strategy">(i>0)</span>{</p>
+          <p tab3><span data-tooltip="Recursively Call the function">myfunction</span><span
+              data-tooltip="Make a change that will allow the function to exit">(i-1)</span></p>
+          <p tab2><span data-tooltip="End of if statement">}</span></p>
+          <p tab1><span data-tooltip="End of function">}</span></p>
+          <p class="halfspace"></p>
+          <p><span data-tooltip="Initially call the function">myfunction</span><span data-tooltip="Input for the function">(3)</span></p>
+
+          <p class="space"></p>
+          <span break></span>
+          <p class="space"></p>
+          
+          <h3>Making something useful</h3>
+
+<p>Alphabetized list words</p>
+<p>function sortFunction(arr) {</p>
+<p>if (Array.isArray(arr)) {</p>
+<p>for (var piece = 0; piece < arr.length; piece++) {</p>
+<p>arr[piece] = sortFunction(arr[piece]);</p>
+<p>}</p>
+<p>arr = arr.sort();</p>
+<p>}</p>
+<p>return arr;</p>
+<p>}</p>
+<p></p>
+<p>var myArray = ["bear","jellyfish","cat","waterbuffalo","eagle","anteater","fish"];</p>
+<p>sortFunction(myArray);</p>
+<p>console.log(myArray);</p>
+<p></p>
+<p>var multiArray = [["car", "truck", "boat"],["birch", "oak", "pine"],["watermelon"],["french", "spanish"],["one", "two", "three", "four"]];</p>
+<p>sortFunction(multiArray);</p>
+<p>console.log(multiArray);</p>
+<p></p>
+<p>var nameArray = [["name","John Smith"],["Phone","555-555-555"],["address",["city","Bozeman"]]]</p>
+<p>sortFunction(nameArray);</p>
+<p>console.log(nameArray);</p>
+<p></p>
+<p></p>
+<p></p>
+ 
+    
+      
+    
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+          
+          
+            
+              
+                
+                  
+                
+                  
+                
+              
+            
+              
+            
+              
+            
+          
+            
+            
+            
+          
+            
+              
+            
+              
+            
+          
+          
+          
+          
+          
+            
+            
+            
+            
+            
+         
+          
+          
+          
+
+
+          <p class="space"></p>
+          <span break></span>
+          <p class="space"></p>
+
+          <h3>Limitless possibilities</h3>
+          <p>Drawing a tree using recursion</p>
+          <p class="codepen" data-height="500" data-theme-id="0" data-default-tab="result" data-user="gargansa"
+              data-slug-hash="zMOZaK"
+              style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+              data-pen-title="#codevember - 09 - Recursive Tree">
+              <span>See the Pen <a href="https://codepen.io/gargansa/pen/zMOZaK/">
+                  #codevember - 09 - Recursive Tree</a> by Robert Crum (<a
+                  href="https://codepen.io/gargansa">@gargansa</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/robertdcrum">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/gargansa">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright text-muted">Copyright &copy; Robert Crum 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
