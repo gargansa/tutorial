@@ -84,7 +84,10 @@
             <li><b>man ls</b> Displays the manual for the ls command.</li>
             <li><b>*</b> Wildcard</li>
 
-            <p></p>
+            <p class="space"></p>
+            <span break></span>
+            <p class="space"></p>
+
             <h3>Navigating through folders</h3>
             <li><b>pwd</b> Print Working Directory</li>
             <li></li>
@@ -100,7 +103,9 @@
             <li><b>ls -larth</b> More info l=long format; a=all files display hidden; r=reverse order oldest first;
               t=sort by time; h=byte suffixes</li>
 
-            <p></p>
+            <p class="space"></p>
+            <span break></span>
+            <p class="space"></p>
             <h3>File and Folder Creation/Deletion</h3>
             <li><b>touch</b> Create a file</li>
             <li><b>touch filename.txt</b> Creates a file with the name filename.txt</li>
@@ -111,17 +116,23 @@
             <li><b>rm -r folder</b> Remove the folder named folder along with everything inside</li>
             <li><b>rm *</b> Removes all files within the current directory - <b>Be careful with this one.</b></li>
 
-            <p></p>
-            <h3>Move and rename</h3>
+            <p class="space"></p>
+            <span break></span>
+            <p class="space"></p>
+            <h3>Move, Copy, and rename</h3>
             <li><b>mv</b> Move a file or folder</li>
             <li><b>mv filename.txt /location/newFolder/</b> moves filename.txt to /location/newfolder</li>
             <li><b>mv * ../differentFolder</b> move every file in this folder into a sibling folder named
               differentFolder</li>
+            <li><b>cp</b> copy</li>
+            <li><b>cp filename.txt /folder/</b> Copies the file to a new location</li>
             <li><b>rename</b> modify the name of files</li>
             <li><b>rename old new oldname.txt</b> Rename oldname.txt to newname.txt</li>
             <li><b>rename F f Facebook*</b> Change all F in files that start with Facebook to f</li>
 
-            <p></p>
+            <p class="space"></p>
+            <span break></span>
+            <p class="space"></p>
             <h3>File viewing</h3>
             <li><b>less</b> Opens a file in read-only mode</li>
             <li><b>less filename.txt</b> Opens the file named filename.txt into the less program</li>
@@ -134,7 +145,9 @@
             <li><b>n</b> next search</li>
             <li><b>shift n</b> previous search</li>
 
-            <p></p>
+            <p class="space"></p>
+            <span break></span>
+            <p class="space"></p>
             <h3>File editing</h3>
             <li><b>vim</b> Opens a file in edit mode</li>
             <li><b>vim filename.txt</b> Opens the file named filename.txt into the vim program</li>
@@ -145,13 +158,17 @@
             <li><b>i</b> Switch to insert mode</li>
             <li><b>dd</b> Delete line when not in insert mode</li>
 
-            <p></p>
-            <h3>Sudo (Please do what i asked)</h3>
+            <p class="space"></p>
+            <span break></span>
+            <p class="space"></p>
+            <h3><span data-tooltip="Please do what i asked">Sudo</span></h3>
             <li><b>whoami</b> Displays the user you currently are.</li>
             <li><b>sudo su root</b> Become the root super user</li>
 
-            <p></p>
-            <h3>Permissions</h3>
+            <p class="space"></p>
+            <span break></span>
+            <p class="space"></p>
+            <h3><span data-tooltip="User Group and Everyone ~ Who can read, write, and execute">Permissions</span></h3>
             <li><b>chmod</b> Change mode</li>
             <li><b>chmod 777 folder</b> Fully opens the permissions of a folder</li>
             <li><b>chmod 777 filename.txt</b> Fully opens the permissions of a file</li>
@@ -167,13 +184,16 @@
               </ul>
             </li>
 
-            <p></p>
-            <h3>Ownership</h3>
+            <p class="space"></p>
+            <span break></span>
+            <p class="space"></p>
+            <h3><span data-tooltip="Who the file or folder belongs to">Ownership</span></h3>
             <li><b>chown</b> Change ownership</li>
             <li><b>chown username:group folder</b> Change the ownership of a folder to username:group</li>
             <li><b>chown username: folder</b> Leaving out the group will choose the default for that user</li>
             <li><b>chown username:group filename.txt</b> Change the ownership of a file</li>
-            <li><b>sudo chown username:group filename.txt</b> Change the ownership of a file when you don't have permissions</li>
+            <li><b>sudo chown username:group filename.txt</b> Change the ownership of a file when you don't have
+              permissions</li>
 
           </ul>
         </div>
