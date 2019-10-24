@@ -511,7 +511,7 @@ footer .copyright {
 }
 
 [break]{
-    border-bottom: 2px solid rgb(47, 136, 151,0.5);
+    border-bottom: 4px solid rgb(47, 136, 151,0.5);
     display: block;
 }
 

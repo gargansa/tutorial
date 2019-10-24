@@ -61,7 +61,7 @@
             <h3 class="subheading">Repetition with an exit strategy</h3>
             <span class="meta">Posted by
               <a href="about.html">Robert Crum</a>
-              last updated October 21, 2019</span>
+              last updated October 23, 2019</span>
           </div>
         </div>
       </div>
@@ -81,107 +81,74 @@
           <h3>Starting Simple</h3>
           <p>This function contains every piece you need for a recursive function.</p>
           <p>function <span data-tooltip="Name of function">myfunction</span><span
-              data-tooltip="Functions Input">(i)</span><span data-tooltip="Start function">{</span></p>
+              data-tooltip="Functions Input">(i)</span> {</span></p>
           <p tab1><span data-tooltip="Output">console.log(i)</span></p>
           <p tab1>if <span data-tooltip="Exit Strategy">(i>0)</span>{</p>
           <p tab3><span data-tooltip="Recursively Call the function">myfunction</span><span
               data-tooltip="Make a change that will allow the function to exit">(i-1)</span></p>
-          <p tab2><span data-tooltip="End of if statement">}</span></p>
-          <p tab1><span data-tooltip="End of function">}</span></p>
+          <p tab2>}</p>
+          <p tab1>}</p>
           <p class="halfspace"></p>
-          <p><span data-tooltip="Initially call the function">myfunction</span><span data-tooltip="Input for the function">(3)</span></p>
+          <p><span data-tooltip="Initially call the function">myfunction</span><span
+              data-tooltip="Input for the function">(3)</span></p>
 
           <p class="space"></p>
           <span break></span>
           <p class="space"></p>
-          
+
           <h3>Making something useful</h3>
 
-<p>Alphabetized list words</p>
-<p>function sortFunction(arr) {</p>
-<p>if (Array.isArray(arr)) {</p>
-<p>for (var piece = 0; piece < arr.length; piece++) {</p>
-<p>arr[piece] = sortFunction(arr[piece]);</p>
-<p>}</p>
-<p>arr = arr.sort();</p>
-<p>}</p>
-<p>return arr;</p>
-<p>}</p>
-<p></p>
-<p>var myArray = ["bear","jellyfish","cat","waterbuffalo","eagle","anteater","fish"];</p>
-<p>sortFunction(myArray);</p>
-<p>console.log(myArray);</p>
-<p></p>
-<p>var multiArray = [["car", "truck", "boat"],["birch", "oak", "pine"],["watermelon"],["french", "spanish"],["one", "two", "three", "four"]];</p>
-<p>sortFunction(multiArray);</p>
-<p>console.log(multiArray);</p>
-<p></p>
-<p>var nameArray = [["name","John Smith"],["Phone","555-555-555"],["address",["city","Bozeman"]]]</p>
-<p>sortFunction(nameArray);</p>
-<p>console.log(nameArray);</p>
-<p></p>
-<p></p>
-<p></p>
- 
-    
-      
-    
-    
-  
-  
+          <p>Alphabetized Arrays ~ This function will allow sorting of multi-dimensional arrays. </p>
+          <p class="halfspace"></p>
+          <p>function <span data-tooltip="Name of function">sortFunction</span><span
+              data-tooltip="Functions Input">(arr)</span> {</p>
+          <p tab1>if <span data-tooltip="Exit Strategy -Don't do this when arr is a string-">(Array.isArray(arr))</span>
+            {</p>
+          <p tab2>for (var piece = 0; piece < arr.length; piece++) {</p> <p tab3>arr[piece] = <span
+                data-tooltip="Recursively Call the function">sortFunction</span><span
+                data-tooltip="Make a change that will allow the function to exit. In this case eventually the piece will be a string not an array.">(arr[piece]);</span></p>
+          <p tab2>}</p>
+          <p tab2><span data-tooltip="The actual work being done on the arrays">arr = arr.sort();</span></p>
+          <p tab1>}</p>
+          <p tab1><span data-tooltip="Output">return arr;</span></p>
+          <p>}</p>
+          <p class="space"></p>
+          <p><span data-tooltip="Variable name">var myArray</span> = <span
+              data-tooltip="An Array">["bear","jellyfish","cat","waterbuffalo","eagle","anteater","fish"];</span></p>
+          <p><span data-tooltip="Initially call the function">sortFunction</span><span
+              data-tooltip="Input for the function">(myArray);</span></p>
+          <p><span data-tooltip="Display Output">console.log(myArray);</span></p>
+          <p class="space"></p>
+          <p><span data-tooltip="Variable name">var twoDimensionalArray</span> = <span
+              data-tooltip="Two Dimensional Array ~ Array that contains arrays as elements">[["car", "truck",
+              "boat"],["birch", "oak", "pine"],["watermelon"],["french", "spanish"],["one", "two", "three",
+              "four"]]</span>;</p>
+          <p><span data-tooltip="Call the function again with 2 dimensional arrays">sortFunction</span><span
+              data-tooltip="Input for the function">(multiArray);</span></p>
+          <p><span data-tooltip="Display Output">console.log(twoDimensionalArray);</span></p>
+          <p class="space"></p>
+          <p><span data-tooltip="Variable name">var multiArray</span> = <span
+              data-tooltip="Multi-Dimensional Array ~ Various depths of arrays">[["name","John
+              Smith"],["Phone","555-555-555"],["address",["city","Bozeman"]]]</span></p>
+          <p><span
+              data-tooltip="Call the function again with a multi-dimensional array">sortFunction(multiArray);</span></p>
+          <p><span data-tooltip="Display Output">console.log(nameArray);</span></p>
+          <p class="space"></p>
+          <p>Click edit on codepen to see the results make sure to open the console.</p>
+          <p class="halfspace"></p>
+          <p class="codepen" data-height="360" data-theme-id="0" data-default-tab="js" data-user="gargansa"
+            data-slug-hash="QWWGzRd"
+            style="height: 360px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+            data-pen-title="Recursive Array Sorting">
+            <span>See the Pen <a href="https://codepen.io/gargansa/pen/QWWGzRd">
+                Recursive Array Sorting</a> by Robert Crum (<a href="https://codepen.io/gargansa">@gargansa</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 
 
 
-
-
-
-
-
-
-
-
-
-  
-          
-          
-            
-              
-                
-                  
-                
-                  
-                
-              
-            
-              
-            
-              
-            
-          
-            
-            
-            
-          
-            
-              
-            
-              
-            
-          
-          
-          
-          
-          
-            
-            
-            
-            
-            
-         
-          
-          
-          
 
 
           <p class="space"></p>
@@ -189,21 +156,17 @@
           <p class="space"></p>
 
           <h3>Limitless possibilities</h3>
-          <p>Drawing a tree using recursion</p>
+          <p>Drawing a tree using recursion. Makes 2 sometimes 3 recursive calls to a function that draws a rectangle on a canvas.</p>
           <p class="codepen" data-height="500" data-theme-id="0" data-default-tab="result" data-user="gargansa"
-              data-slug-hash="zMOZaK"
-              style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
-              data-pen-title="#codevember - 09 - Recursive Tree">
-              <span>See the Pen <a href="https://codepen.io/gargansa/pen/zMOZaK/">
-                  #codevember - 09 - Recursive Tree</a> by Robert Crum (<a
-                  href="https://codepen.io/gargansa">@gargansa</a>)
-                on <a href="https://codepen.io">CodePen</a>.</span>
-            </p>
-            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
-
-
-
+            data-slug-hash="zMOZaK"
+            style="height: 500px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+            data-pen-title="#codevember - 09 - Recursive Tree">
+            <span>See the Pen <a href="https://codepen.io/gargansa/pen/zMOZaK/">
+                #codevember - 09 - Recursive Tree</a> by Robert Crum (<a
+                href="https://codepen.io/gargansa">@gargansa</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
         </div>
       </div>
