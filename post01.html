@@ -59,10 +59,10 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
             <h1>Intro to the bash language</h1>
-            <h2 class="subheading">A short guide to bash commands</h2>
+            <h2 class="subheading">A short list of useful bash commands</h2>
             <span class="meta">Posted by
               <a href="about.html">Robert Crum</a>
-              last updated October 6, 2019</span>
+              last updated November 4, 2019</span>
           </div>
         </div>
       </div>
@@ -78,122 +78,199 @@
           <p>A Unix shell and command language that lives inside terminal. </p>
 
           <ul class="list-unstyled">
-            <h3>General Useful</h3>
+            <h3>Manual</h3>
 
-            <li><b>man</b> Manuel - use before commands</li>
-            <li><b>man ls</b> Displays the manual for the ls command.</li>
-            <li><b>*</b> Wildcard</li>
+            <li><span data-tooltip="Manual">man</span> When used before a command displays info about the command</li>
+            <li><span data-tooltip="Manuel">man</span> <span data-tooltip="List files and folders">ls</span> Displays
+              the manual for the ls command.</li>
 
             <p class="space"></p>
             <span break></span>
             <p class="space"></p>
 
             <h3>Navigating through folders</h3>
-            <li><b>pwd</b> Print Working Directory</li>
+            <li><span data-tooltip="Print Working Directory">pwd</span> Displays what folder you are curently in.</li>
             <li></li>
-            <li><b>cd</b> Change Directory</li>
-            <li><b>cd ..</b> Move to parent directory</li>
-            <li><b>cd ~</b> Move to home directory</li>
-            <li><b>cd /</b> Move to root directory</li>
-            <li><b>cd -</b> Return to previous directory</li>
-            <li><b>cd ../otherFolder</b> Move back one directory and then into otherFolder</li>
-            <li><i>Tab key</i> Use to autocomplete file and directory names. double click for list of options.</li>
+            <li><span data-tooltip="Change Directory">cd</span> <span data-tooltip="Parent directory">..</span> Moves
+              back one directory</li>
+            <li><span data-tooltip="Change Directory">cd</span> <span data-tooltip="Home directory">~</span> Moves to
+              your home directory</li>
+            <li><span data-tooltip="Change Directory">cd</span> <span data-tooltip="Root directory">/</span> Moves to
+              root directory</li>
+            <li><span data-tooltip="Change Directory">cd</span> <span data-tooltip="Previous directory">-</span> Return
+              to previous directory you were in</li>
+            <li><span data-tooltip="Change Directory">cd</span> <span data-tooltip="Parent directory">..</span><span
+                data-tooltip="Sibling directory">/otherFolder</span> Move back one directory and then into a different
+              folder</li>
+            <li><span data-tooltip="Autocomplete">Tab</span> key - Use to autocomplete file and directory names.</li>
+            <li><span data-tooltip="List Suggestions">Tab Tab</span> Double tab for list of files and folders that
+              match.</li>
             <li></li>
-            <li><b>ls</b> List contents of directory</li>
-            <li><b>ls -larth</b> More info l=long format; a=all files display hidden; r=reverse order oldest first;
-              t=sort by time; h=byte suffixes</li>
+            <li><span data-tooltip="List files and folders">ls</span> List contents of directory</li>
+            <li><span data-tooltip="List files and folders">ls</span> <span data-tooltip="Options">-</span><span
+                data-tooltip="Long Format">l</span><span
+                data-tooltip="All Files and Folders including hidden">a</span><span
+                data-tooltip="Reverse the order">r</span><span data-tooltip="Sort by Time">t</span><span
+                data-tooltip="Display Byte Suffixes">h</span> Display more info about files and folders</li>
+            <li><span data-tooltip="List files and folders">ls</span> <span data-tooltip="Options">-</span><span
+                data-tooltip="Long Format">l</span><span data-tooltip="Directory">d</span> Display more info about
+              directory you are currently in.</li>
 
             <p class="space"></p>
             <span break></span>
             <p class="space"></p>
+
             <h3>File and Folder Creation/Deletion</h3>
-            <li><b>touch</b> Create a file</li>
-            <li><b>touch filename.txt</b> Creates a file with the name filename.txt</li>
-            <li><b>mkdir</b> Make Directory</li>
-            <li><b>mkdir folder</b> Makes a folder with the name folder</li>
-            <li><b>rm</b> Remove</li>
-            <li><b>rm filename.txt</b> Remove the file named filename.txt</li>
-            <li><b>rm -r folder</b> Remove the folder named folder along with everything inside</li>
-            <li><b>rm *</b> Removes all files within the current directory - <b>Be careful with this one.</b></li>
+            <li><span data-tooltip="Create File">touch</span> <span
+                data-tooltip="What to name the file.">filename.txt</span> Creates a file</li>
+            <li><span data-tooltip="Make Directory">mkdir</span> <span data-tooltip="Directory Name">folder</span>
+              Create a Folder</li>
+            <li><span data-tooltip="Remove">rm</span> <span data-tooltip="The file to remove">filename.txt</span> Remove
+              a file</li>
+            <li><span data-tooltip="Remove">rm</span> <span data-tooltip="Option">-</span><span
+                data-tooltip="Recursive - Folder and all within">r</span> <span
+                data-tooltip="The folder to remove">folderName</span> Remove a folder named folder along with everything
+              inside</li>
+            <li><span data-tooltip="Remove">rm</span> <span data-tooltip="Wildcard - in this case everything">*</span>
+              Removes all files within the current directory - Be careful with this one.</li>
 
             <p class="space"></p>
             <span break></span>
             <p class="space"></p>
             <h3>Move, Copy, and rename</h3>
-            <li><b>mv</b> Move a file or folder</li>
-            <li><b>mv filename.txt /location/newFolder/</b> moves filename.txt to /location/newfolder</li>
-            <li><b>mv * ../differentFolder</b> move every file in this folder into a sibling folder named
-              differentFolder</li>
-            <li><b>cp</b> copy</li>
-            <li><b>cp filename.txt /folder/</b> Copies the file to a new location</li>
-            <li><b>rename</b> modify the name of files</li>
-            <li><b>rename old new oldname.txt</b> Rename oldname.txt to newname.txt</li>
-            <li><b>rename F f Facebook*</b> Change all F in files that start with Facebook to f</li>
+            <li><span data-tooltip="Move">mv</span> <span data-tooltip="The File to move">filename.txt</span> <span
+                data-tooltip="Destination">/newLocation/</span> moves filename.txt to /newLocation</li>
+            <li><span data-tooltip="Move">mv</span> <span
+                data-tooltip="Wildcard - Everything inside current location">*</span> <span
+                data-tooltip="Parent Directory">..</span><span data-tooltip="Sibling folder">/differentFolder</span>
+              move every file in this folder into a sibling folder</li>
+            <li><span data-tooltip="Copy">cp</span> <span data-tooltip="File Name">filename.txt</span> <span
+                data-tooltip="Destination">/folder/</span> Copies the file to a new location</li>
+            <li><span data-tooltip="Change the name of file or files">rename</span> <span
+                data-tooltip="Part of filename to change">old</span> <span
+                data-tooltip="What to change that part to">new</span> <span data-tooltip="File Name">oldname.txt</span>
+              Renames oldname.txt to newname.txt</li>
+            <li><span data-tooltip="Change the name of file or files">rename</span> <span
+                data-tooltip="Part of filenames to change">F</span> <span
+                data-tooltip="What to change that part to">f</span> <span
+                data-tooltip="filenames using a wildcard - In this case could mean Facebook.txt Facebook.html Facebook.css">Facebook*</span>
+              Change all F in files that start with Facebook to f</li>
 
             <p class="space"></p>
             <span break></span>
             <p class="space"></p>
             <h3>File viewing</h3>
-            <li><b>less</b> Opens a file in read-only mode</li>
-            <li><b>less filename.txt</b> Opens the file named filename.txt into the less program</li>
+            <li><span data-tooltip="Open a file into a read-only viewer">less</span> <span
+                data-tooltip="Name of file to open">filename.txt</span> Opens filename.txt into the less program</li>
             <li><i>commands within less</i></li>
-            <li><b>q</b> exit</li>
-            <li><b>G</b> go to bottom of file</li>
-            <li><b>g</b> go to top of file</li>
-            <li><b>?</b> Search up in file</li>
-            <li><b>/</b> Search down in file</li>
-            <li><b>n</b> next search</li>
-            <li><b>shift n</b> previous search</li>
+            <li><span data-tooltip="Quit">q</span> exit</li>
+            <li>arrow keys move through file</li>
+            <li><span data-tooltip="Shift + g = go to bottom">G</span> Jumps to the bottom of the file</li>
+            <li><span data-tooltip="g = go to top">g</span> Jumps to the top of the file</li>
+            <li><span data-tooltip="Shift + / = Search up">?</span> Search up from current location in file</li>
+            <li><span data-tooltip="/ = Search down">/</span> Search down from current location in file</li>
+            <li><span data-tooltip="Shift + n = previous">N</span> Go to the previous search result location</li>
+            <li><span data-tooltip="n = next">n</span> Go to the next search result location</li>
 
             <p class="space"></p>
             <span break></span>
             <p class="space"></p>
             <h3>File editing</h3>
-            <li><b>vim</b> Opens a file in edit mode</li>
-            <li><b>vim filename.txt</b> Opens the file named filename.txt into the vim program</li>
-            <li><i>commands within vim</i></li>
-            <li><b>:q!</b> exit without saving (colon quit bang)</li>
-            <li><b>:wq!</b> exit with saving (colon write quit bang)</li>
-            <li><b>arrow keys</b> move through file</li>
-            <li><b>i</b> Switch to insert mode</li>
-            <li><b>dd</b> Delete line when not in insert mode</li>
+            <li><span data-tooltip="Open a file in an editor">vim</span> <span
+                data-tooltip="Name of file to open">filename.txt</span> Opens filename.txt into the vim program</li>
+
+            <li>use arrow keys move through file</li>
+            <p class="halfspace"></p>
+            <li>When not in insert mode</li>
+            <li>To Quit without saving <span data-tooltip="Lets vim know this is a command">:</span><span
+                data-tooltip="Quit">q</span><span
+                data-tooltip="Bang - Forces, only needed if your user doesn't own the file">!</span> followed by Enter
+            </li>
+            <li>To Save and Quit <span data-tooltip="Lets vim know this is a command">:</span><span
+                data-tooltip="Write">w</span><span data-tooltip="Quit">q</span><span
+                data-tooltip="Bang - Forces, only needed if your user doesn't own the file'">!</span> followed by Enter
+            </li>
+            <li><span data-tooltip="Delete Line">dd</span> Delete line - Similar to Cut</li>
+            <li><span data-tooltip="Delete 3 lines">3dd</span> Delete # of lines starting with current line</li>
+            <li><span data-tooltip="Yank Line">yy</span> Copy line</li>
+            <li><span data-tooltip="Yank 3 Lines">3yy</span> Copy # of lines starting with current line</li>
+            <li><span data-tooltip="Paste line/lines">p</span> Paste the last copied or deleted line/lines</li>
+            <li><span data-tooltip="Insert">i</span> Switch to insert mode</li>
+
+            <p class="halfspace"></p>
+            <li>When in insert mode</li>
+            <li><span data-tooltip="Escape insert mode">Esc</span> Return from insert mode</li>
 
             <p class="space"></p>
             <span break></span>
             <p class="space"></p>
-            <h3><span data-tooltip="Please do what i asked">Sudo</span></h3>
-            <li><b>whoami</b> Displays the user you currently are.</li>
-            <li><b>sudo su root</b> Become the root super user</li>
+            <h3><span data-tooltip="SuperUser DO (Please do what i asked)">Sudo</span></h3>
+            <li><span data-tooltip="Displays the current user you are working as">whoami</span> Sometimes you may need
+              to run commands as other users such as root. </li>
+            <li><span data-tooltip="With super user permissions">sudo</span> <span data-tooltip="Become">su</span> <span
+                data-tooltip="Super User, Also known as Root Account, Root User">root</span> Become the root super user
+            </li>
 
             <p class="space"></p>
             <span break></span>
             <p class="space"></p>
-            <h3><span data-tooltip="User Group and Everyone ~ Who can read, write, and execute">Permissions</span></h3>
-            <li><b>chmod</b> Change mode</li>
-            <li><b>chmod 777 folder</b> Fully opens the permissions of a folder</li>
-            <li><b>chmod 777 filename.txt</b> Fully opens the permissions of a file</li>
-            <li><b>sudo chmod 777 filename.txt</b> Change the permissions when you don't have permission</li>
-            <li>You can see these permissions by typing <b>ls -larth</b> in a folder</li>
-            <li><b>-</b>rwxrwxrwx (<b>-</b> = file)</li>
-            <li><b>d</b>rwxrwxrwx (<b>d</b> = directory)</li>
-            <li><b>chmod 764 filename.txt</b> sets the permmissions of filename.txt to
-              <ul>
-                <li>7(rwx)Read/Write/Execute permissions for the user the file belongs to </li>
-                <li>6(rw-)Read/Write permissions for group the user is a part of</li>
-                <li>4(r--)Read permissions for everyone</li>
-              </ul>
+            <h3><span
+                data-tooltip="User, Group, and Everyone ~ Who is allowed to read, write, and execute">Permissions</span>
+            </h3>
+            <li><span data-tooltip="Change Mode">chmod</span> <span data-tooltip="Users Permissions">7</span><span
+                data-tooltip="Group Permissions">7</span><span data-tooltip="Everyones Permissions">7</span> <span
+                data-tooltip="Location">folder</span> Fully opens the permissions of a folder</li>
+            <li><span data-tooltip="Change Mode">chmod</span> <span data-tooltip="Users Permissions">7</span><span
+                data-tooltip="Group Permissions">7</span><span data-tooltip="Everyones Permissions">7</span> <span
+                data-tooltip="Location">filename.txt</span> Fully opens the permissions of a file</li>
+            <li><span data-tooltip="With super user permissions">sudo</span> <span
+                data-tooltip="Change Mode">chmod</span> <span
+                data-tooltip="Users Permissions - Read Write eXecute">7</span><span
+                data-tooltip="Group Permissions - Read eXecute">5</span><span
+                data-tooltip="Everyone Permissions - eXecute">1</span> <span
+                data-tooltip="Name of file">filename.txt</span> Change the permissions for files you dont own</li>
+            <li><span data-tooltip="List files and folders">ls</span> <span data-tooltip="Options">-</span><span
+                data-tooltip="Long Format">l</span><span
+                data-tooltip="All Files and Folders including hidden">a</span><span
+                data-tooltip="Reverse the order">r</span><span data-tooltip="Sort by Time">t</span><span
+                data-tooltip="Display Byte Suffixes">h</span> displays these permissions</li>
+            <p class="halfspace"></p>
+            <li>Examples of how the permissions display with ls -larth</li>
+            <li><span data-tooltip="File">-</span><span data-tooltip="User Permission = 7">rwx</span><span
+                data-tooltip="Group Permission = 7">rwx</span><span data-tooltip="Everyone Permission = 7">rwx</span>
+            </li>
+            <li><span data-tooltip="Directory">d</span><span data-tooltip="User Permission = 7">rwx</span><span
+                data-tooltip="Group Permission = 7">rwx</span><span data-tooltip="Everyone Permission = 7">rwx</span>
+            </li>
+            <li><span data-tooltip="File">-</span><span data-tooltip="User Permission = 6">rw-</span><span
+                data-tooltip="Group Permission = 5">r-x</span><span data-tooltip="Everyone Permission = 4">r--</span>
+            </li>
+            <li><span data-tooltip="File">-</span><span data-tooltip="User Permission = 3">-wx</span><span
+                data-tooltip="Group Permission = 2">-w-</span><span data-tooltip="Everyone Permission = 1">--x</span>
+            </li>
+            <li>Value of each location</li>
+            <li><span data-tooltip="4">r</span><span data-tooltip="2">w</span><span data-tooltip="1">x</span></li>
             </li>
 
             <p class="space"></p>
             <span break></span>
             <p class="space"></p>
             <h3><span data-tooltip="Who the file or folder belongs to">Ownership</span></h3>
-            <li><b>chown</b> Change ownership</li>
-            <li><b>chown username:group folder</b> Change the ownership of a folder to username:group</li>
-            <li><b>chown username: folder</b> Leaving out the group will choose the default for that user</li>
-            <li><b>chown username:group filename.txt</b> Change the ownership of a file</li>
-            <li><b>sudo chown username:group filename.txt</b> Change the ownership of a file when you don't have
-              permissions</li>
+            <li><span data-tooltip="Change Ownership">chown</span> <span
+                data-tooltip="The username you would like to change the file or folder to">username:</span><span
+                data-tooltip="The group that the user belongs to - this part can be omitted">group</span> <span
+                data-tooltip="The File or folder to change the ownership of">folder</span> Change the ownership of a
+              folder</li>
+            <li><span data-tooltip="Change Ownership">chown</span> <span
+                data-tooltip="The username you would like to change the file or folder to">username:</span><span
+                data-tooltip="The group that the user belongs to - this part can be omitted">group</span> <span
+                data-tooltip="The File or folder to change the ownership of">filename.txt</span> Change the ownership of
+              a file</li>
+            <li><span data-tooltip="as Super User DO">sudo</span> <span data-tooltip="Change Ownership">chown</span>
+              <span data-tooltip="The username you would like to change the file or folder to">username:</span><span
+                data-tooltip="The group that the user belongs to - this part can be omitted">group</span> <span
+                data-tooltip="The File or folder to change the ownership of">filename.txt</span> Change the ownership of
+              a file when the file does not belong to your user</li>
 
           </ul>
         </div>
