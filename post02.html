@@ -195,9 +195,9 @@
           <p><span data-tooltip="Insert Mode"> i key</span></p>
           <p>Delete the theme within the " " </p>
           <p>Type in the theme you want.</p>
-          <p><span data-tooltip="Leave Insert Mode"> esc key</span></p>
-          <p>Type <span data-tooltip="Write Quit Bang">:wq!</span> and hit Enter </p>
-          <p><i>If you make a mistake when editing this file type </i> <span data-tooltip="Quit Bang">:q!</span> <i></i>
+          <p><span data-tooltip="Leave Insert Mode"> esc</span> key</p>
+          <p>Type <span data-tooltip="Colon lets vim know this is a command">:</span><span data-tooltip="Write">w</span><span data-tooltip="Quit">q</span><span data-tooltip="Bang: Optional use this if you lack the permissions to change this file">!</span> and hit Enter </p>
+          <p><i>If you make a mistake when editing this file type </i> <span data-tooltip="Colon lets vim know this is a command">:</span><span data-tooltip="Quit">q</span><span data-tooltip="Bang: Optional use this if you lack the permissions to change this file">!</span> <i></i>
           </p>
 
           <p class="doublespace"></p>
@@ -212,7 +212,7 @@
             </span><span data-tooltip="And then when previous command is complete">&& </span><span
               data-tooltip="Reload">source
             </span><span data-tooltip="File Location">/etc/bashrc</span>' </p>
-          <p>To save this ESC then <span data-tooltip="Write Quit Bang"> :wq! </span></p>
+          <p>To save this ESC then <span data-tooltip="Colon lets vim know this is a command">:</span><span data-tooltip="Write">w</span><span data-tooltip="Quit">q</span><span data-tooltip="Bang: Optional use this if you lack the permissions to change this file">!</span></p>
           <p>Reload the saved file with source /etc/bashrc </p>
           <p>Now anytime you type rc it will open your bash file into vim editor and automatically reload the
             file when you exit</p>
@@ -225,16 +225,16 @@
             </span><span data-tooltip="And then when previous command is complete">&& </span><span
               data-tooltip="Reload">source
             </span><span data-tooltip="File Location">~/.zshrc</span>' </p>
-          <p>To save this ESC then <span data-tooltip="Write Quit Bang"> :wq! </span></p>
-          <p>Reload the saved file with source ~/.zshrc </p>
-          <p>Now anytime you type rc it will open your bash file into vim editor and automatically reload the
+          <p>To save this ESC then <span data-tooltip="Colon lets vim know this is a command">:</span><span data-tooltip="Write">w</span><span data-tooltip="Quit">q</span><span data-tooltip="Bang: Optional use this if you lack the permissions to change this file">!</span></p>
+          <p>Reload the saved file with <span data-tooltip="Loads the file">source</span> <span data-tooltip="File location">~/.zshrc</span> </p>
+          <p>Now anytime you type <span data-tooltip="Alias shortcut you just set up">rc</span> it will open your bash file into vim editor and automatically reload the
             file when you exit</p>
 
           <p class="doublespace"></p>
           <h3>Creating Functions</h3>
 
           <p>#Function that takes an input when called</p>
-          <p>#Executed by typing myfunction followed by value</p>
+          <p>#Executed by typing the function name followed by value</p>
           <p>#Example: <span data-tooltip="Output:Eats 1 piece of cake Eats 2 piece of cake">cake 2</span></p>
           <p><span data-tooltip="Name of function">cake()</span><span data-tooltip="Start of function">{</span></p>
           <p tab1>for <span data-tooltip="Variable">X</span> in <span data-tooltip="Sequence of numbers between 1 and input">$(seq 1 $1);</span></p>
@@ -248,11 +248,12 @@
           <span break></span>
           <p class="space"></p>
           <p>#Function that requests an input</p>
-          <p>#Executed by typing who</p>
+          <p>#Executed by typing just the function name it will then prompt for input.</p>
+          <p>#Example: <span data-tooltip="Output:Please enter your name:">who</span></p>
           <p><span data-tooltip="Name of function">who()</span><span data-tooltip="Start of function">{</span>
           </p>
           <p tab1><span data-tooltip="Outputs a string to the terminal">echo </span><span data-tooltip="String">"Please
-              enter a your name:"</span></p>
+              enter your name:"</span></p>
           <p tab1><span data-tooltip="Takes an input from the user">read </span><span
               data-tooltip="Variable">RESPONSE</span></p>
           <p tab1><span data-tooltip="Outputs a string to the terminal">echo </span><span data-tooltip="String">"Hello"
