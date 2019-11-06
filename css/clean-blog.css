@@ -464,6 +464,7 @@ footer .copyright {
   background-color: hsla(204, 85%, 62%, 0.95);
   color: rgb(0, 0, 0);
   content: attr(data-tooltip);
+  text-indent: 0em;/*Reset the tabs used in displaying functions*/
   text-align: center;
   font-size: 14px;
   line-height: 1.2;
