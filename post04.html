@@ -57,11 +57,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>React State and Props</h1>
-            <h3 class="subheading">What are they and where to use them.</h3>
+            <h1>Advanced Bash</h1>
+            <h3 class="subheading">Pipes, Redirects, and Tees.</h3>
             <span class="meta">Posted by
               <a href="about.html">Robert Crum</a>
-              last updated October 25, 2019</span>
+              last updated February 10, 2019</span>
           </div>
         </div>
       </div>
@@ -74,16 +74,101 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
 
-          <h3>State</h3>
-          <p>The values of this.</p>
+          <h3>Pipes, Redirects, and Tees</h3>
+          <p>Useful powerful commands that simplify code. Mouse over bold text for explanation of command.</p>
 
           <p class="doublespace"></p>
-          <h3>Header</h3>
-          <p><span data-tooltip="Name of function">tooltip</span>
-          <p tab1>tab</p>
+          <h3>Chaining Commands</h3>
+          <p>Different ways to run commands.</p>
+          <p class="halfspace"></p>
+
+          <p>Using a semicolon to separate commands</p>
+          <p>Run commandA then commandB</p>
+          <p><span data-tooltip="First Command">commandA</span><span
+              data-tooltip="After first command is finished run second command">; </span><span
+              data-tooltip="Second Command">commandB</span></span></p>
+          <p><span data-tooltip="Search within file.txt for the string hello">grep -l 'hello' file.txt</span><span
+              data-tooltip="Even if the first command fails">; </span><span
+              data-tooltip="This command will happen regardless of the success of the first command">echo
+              "hello" > file.txt</span></span></p>
+          <p class="space"></p>
+
+          <p>Using double ampersand to separate commands.</p>
+          <p>If commandA is successful then run commandB</p>
+          <p><span data-tooltip="First Command">commandA</span><span
+              data-tooltip="Only if first command is successful run second command"> && </span><span
+              data-tooltip="Second Command">commandB</span></span></p>
+          <p><span data-tooltip="Search within file.txt for the string hello">grep -l 'world' file.txt</span><span
+              data-tooltip="Continue only if first command was successful"> && </span><span
+              data-tooltip="This command will happen only if the first command is successful">echo "world" >
+              file.txt</span></span>
+          </p>
+          <p class="space"></p>
+
+          <p>Using double pipe to separate commands.</p>
+          <p>If commandA fails then run commandB</p>
+          <p><span data-tooltip="First Command">commandA</span><span
+              data-tooltip="Only If first command fails run second command"> || </span><span
+              data-tooltip="Second Command">commandB</span></span></p>
+          <p><span data-tooltip="First Command - Print working directory">grep -l 'world' file.txt</span><span
+              data-tooltip="If first command fails then run second command"> || </span><span
+              data-tooltip="Second Command - List folders and files">echo "world" > file.txt</span></span>
+          </p>
+          <p class="space"></p>
+
+          <p>Using a single ampersand to run a command in the background.</p>
+          <p><span data-tooltip="First Command">command</span><span data-tooltip="Run command in the background"> &
+            </span></p>
+          <p><span data-tooltip="First Command">tail file.txt</span><span data-tooltip="Run command in the background">
+              &
+            </span></p>
+
+
           <p class="space"></p>
           <span break></span>
           <p class="space"></p>
+
+
+          <p class="doublespace"></p>
+          <h3><span data-tooltip="Think plumbing pipe">Pipe</span></h3>
+          <p>Sending the results of a command to a new command.</p>
+          <p class="halfspace"></p>
+          <p><span data-tooltip="Greps/grabs every line within 'filename.txt' that contains 'string'">grep "string"
+              filename.txt</span><span data-tooltip="Pipes/sends the results into the next command"> | </span><span
+              data-tooltip="Greps/grabs any line from the prior results that contains 'a'">grep "a"</span></p>
+
+
+          <p class="space"></p>
+          <span break></span>
+          <p class="space"></p>
+
+          <p class="doublespace"></p>
+          <h3><span data-tooltip="Like a detour">Redirects</span></h3>
+          <p>Sending the results of a command to a file.</p>
+          <p><span data-tooltip="Output Hello World">echo 'Hello World'</span><span
+              data-tooltip="Create a new file if it doesn't exist. Overwrite it if it does."> > </span><span
+              data-tooltip="Name of the file to Create/Overwrite">filename.txt</span></p>
+          <p><span data-tooltip="Output Hello World">echo 'Hello World'</span><span
+              data-tooltip="Create a new file if it doesn't exist. Append to the end it if it does."> >> </span><span
+              data-tooltip="Name of the file to Create/Overwrite">filename.txt</span></p>
+
+
+          <p class="space"></p>
+          <span break></span>
+          <p class="space"></p>
+
+
+          <p class="doublespace"></p>
+          <h3><span data-tooltip="Think T-splitter used in plumbing pipes">Tee</span></h3>
+          <p>Splitting the results of a command between a file and its standard output.</p>
+          <p><span data-tooltip="Output Hello World">echo "hello world"</span><span
+              data-tooltip="Pipe to a tee command. Sends the standard output of the function to a file as well as allowing its standard output">
+              | tee</span><span data-tooltip="Name of file to send the results"> filename.txt</span></p>
+          <p><span data-tooltip="Output Hello World">echo "hello world"</span><span
+              data-tooltip="Pipe to a tee command. Sends the standard output of the function to a file as well as allowing its standard output">
+              | tee</span><span data-tooltip="Append to the file rather than overwriting it."> -a </span><span
+              data-tooltip="Name of file to send the results"> filename.txt</span></p>
+
 
         </div>
       </div>
